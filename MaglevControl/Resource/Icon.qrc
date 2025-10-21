@@ -1,0 +1,14 @@
+<RCC>
+    <qresource prefix="/">
+        <file>mcs.png</file>
+    </qresource>
+    <qresource prefix="/styles">
+        <file>dark_industrial_theme.css</file>
+        <file>light_modern_theme.css</file>
+        <file>classic_blue_theme.css</file>
+        <file>dark_style.css</file>
+        <file>temp.css</file>
+        <file>lightblue_style.css</file>
+        <file>blue_style.css</file>
+    </qresource>
+</RCC>

@@ -1,0 +1,184 @@
+﻿/* ============= 1. 主窗口：亮蓝垂直渐变（模拟百度按钮风格） ============= */
+QMainWindow {
+    /* 亮蓝→深蓝渐变：#4AB2FF（上）→#2A79E8（下） */
+    background: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+                                stop:0 #4AB2FF,
+                                stop:1 #2A79E8) !important;
+    color: #FFFFFF; /* 白色文本，高对比 */
+    font-family: "Microsoft YaHei", "Segoe UI", sans-serif;
+    font-size: 15px;
+}
+
+/* ============= 2. Widget容器：浅蓝背景（与主渐变协调） ============= */
+QWidget, QFrame {
+    background-color: #E5F2FF !important; /* 极浅亮蓝，替代灰蓝 */
+    color: #1A2E47; /* 深灰文本，适配浅蓝背景 */
+    font-family: "Microsoft YaHei", "Segoe UI", sans-serif;
+    font-size: 15px;
+    margin: 5px;
+    border-radius: 4px;
+}
+
+/* ============= 3. 分组框：白色功能区 + 亮蓝边框 ============= */
+QGroupBox {
+    border: 1px solid #4AB2FF; /* 亮蓝边框，与主渐变呼应 */
+    border-radius: 6px;
+    margin-top: 10px;
+    padding: 15px;
+    background-color: #FFFFFF; /* 白色，突出内容 */
+}
+QGroupBox::title {
+    color: #2A79E8; /* 主渐变的深蓝，强化标题 */
+    font-size: 16px;
+    font-weight: bold;
+    subcontrol-origin: margin;
+    left: 10px;
+}
+
+/* 组内元素样式调整 */
+QGroupBox QLabel,
+QGroupBox QCheckBox {
+    background-color: transparent;
+    padding: 4px 0;
+}
+
+/* ============= 4. 按钮：亮蓝渐变（模拟百度按钮交互） ============= */
+QPushButton {
+    /* 按钮渐变：亮蓝→深蓝（与主窗口渐变同色系） */
+    background: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+                                stop:0 #4AB2FF,
+                                stop:1 #2A79E8);
+    color: #FFFFFF;
+    border: 1px solid #2A79E8; /* 深色边框，强化立体感 */
+    border-radius: 4px;
+    padding: 8px 16px;
+    font-size: 15px;
+}
+QPushButton:hover {
+    /* Hover渐变：更亮的蓝→浅蓝 */
+    background: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+                                stop:0 #5AC3FF,
+                                stop:1 #3A8AF8);
+}
+QPushButton:pressed {
+    /* 按下渐变：更深的蓝→暗蓝 */
+    background: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+                                stop:0 #1A69D8,
+                                stop:1 #0A59C8);
+    border-color: #0A59C8;
+}
+QPushButton:disabled {
+    background: #B2D7FF; /* 浅灰蓝，弱化禁用态 */
+    color: #86A8C8;
+    border-color: #99C8FF;
+}
+
+/* 危险按钮：红色渐变（保留警示，与蓝系对比） */
+QPushButton[danger="true"] {
+    background: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+                                stop:0 #FF6C6C,
+                                stop:1 #E05656);
+    border-color: #E05656;
+}
+QPushButton[danger="true"]:hover {
+    background: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+                                stop:0 #FF7C7C,
+                                stop:1 #F06666);
+}
+
+/* ============= 5. 输入控件：亮蓝边框 + 白色背景 ============= */
+QLineEdit, QSpinBox, QComboBox {
+    background-color: #FFFFFF;
+    color: #1A2E47;
+    border: 1px solid #4AB2FF; /* 亮蓝边框，与主色调统一 */
+    border-radius: 4px;
+    padding: 6px;
+    font-size: 15px;
+    min-height: 28px;
+}
+QLineEdit:focus, QSpinBox:focus, QComboBox:focus {
+    border-color: #2A79E8; /* 主渐变的深蓝，强化聚焦 */
+    outline: 1px solid rgba(42, 121, 232, 0.3); /* 浅蓝高光 */
+}
+
+/* ============= 6. 滑块：亮蓝把手 + 浅蓝轨道 ============= */
+QSlider::groove:horizontal {
+    background: #C2E2FF; /* 极浅亮蓝轨道，与Widget协调 */
+    height: 8px;
+    border-radius: 4px;
+}
+QSlider::handle:horizontal {
+    background: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+                                stop:0 #4AB2FF,
+                                stop:1 #2A79E8); /* 与按钮同渐变 */
+    width: 18px;
+    margin: -5px 0;
+    border-radius: 9px;
+    border: 1px solid #2A79E8; /* 与按钮边框同色 */
+}
+QSlider::handle:horizontal:hover {
+    background: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+                                stop:0 #5AC3FF,
+                                stop:1 #3A8AF8); /* 与按钮hover同渐变 */
+}
+
+/* ============= 7. 表格：白色背景 + 亮蓝交互 ============= */
+QTableWidget {
+    background-color: #FFFFFF;
+    gridline-color: #C2E2FF; /* 与滑块轨道同色 */
+    border: 1px solid #4AB2FF; /* 亮蓝边框 */
+    border-radius: 4px;
+}
+QTableWidget::item:selected {
+    background-color: #B2D7FF; /* 浅亮蓝选中，与主色调呼应 */
+    color: #2A79E8; /* 主渐变的深蓝，强化对比 */
+}
+QHeaderView::section {
+    background-color: #C2E2FF; /* 与滑块轨道同色 */
+    color: #2A79E8; /* 主渐变的深蓝 */
+    border: 1px solid #4AB2FF; /* 亮蓝边框 */
+    padding: 8px;
+}
+
+/* ============= 8. 标签页：亮蓝未选中 + 白色选中 ============= */
+QTabBar::tab {
+    background: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+                                stop:0 #4AB2FF,
+                                stop:1 #2A79E8); /* 与按钮同渐变 */
+    color: #FFFFFF; /* 白色文本，高对比 */
+    padding: 8px 20px;
+    border: 1px solid #2A79E8; /* 深色边框 */
+    margin-right: 2px;
+    border-radius: 4px 4px 0 0;
+    font-size: 15px;
+}
+QTabBar::tab:selected {
+    background-color: #FFFFFF; /* 白色选中，与面板统一 */
+    border-bottom-color: #FFFFFF;
+    color: #2A79E8; /* 主渐变的深蓝文本 */
+}
+
+/* ============= 9. 日志区域：浅蓝背景 + 深色文本 ============= */
+QTextEdit {
+    background-color: #E5F2FF; /* 与Widget同色，保持层次 */
+    color: #1A2E47;
+    border: 1px solid #4AB2FF; /* 亮蓝边框 */
+    border-radius: 4px;
+    padding: 8px;
+    font-family: "Consolas", "Monaco", monospace;
+    font-size: 15px;
+}
+
+/* ============= 10. 状态标签：高对比色（功能优先） ============= */
+.status-connected {
+    color: #28A745;
+    font-weight: bold;
+}
+.status-disconnected {
+    color: #DC3545;
+    font-weight: bold;
+}
+.status-warning {
+    color: #FD7E14;
+    font-weight: bold;
+}

@@ -1,0 +1,134 @@
+/* 浅色现代主题 */
+QMainWindow, QWidget {
+    background-color: #f5f5f5;
+    color: #333333;
+    font-family: "Segoe UI", "Microsoft YaHei", sans-serif;
+    font-size: 14px;
+}
+
+QGroupBox {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    margin-top: 12px;
+    padding: 15px;
+    background-color: #ffffff;
+}
+QGroupBox::title {
+    color: #333;
+    font-size: 16px;
+    font-weight: bold;
+    subcontrol-origin: margin;
+    left: 15px;
+}
+
+QPushButton {
+    background-color: #2196f3;
+    color: #ffffff;
+    border: none;
+    border-radius: 4px;
+    padding: 6px 12px;
+    font-size: 15px;
+    min-height: 36px;
+    min-width: 100px;
+}
+QPushButton:hover {
+    background-color: #1976d2;
+}
+QPushButton:pressed {
+    background-color: #0d47a1;
+}
+QPushButton:disabled {
+    background-color: #c7c7c7;
+    color: #8a8a8a;
+}
+/* 结构对齐工业暗色：标签透明、输入控件、滑块、表格、标签页、日志文本 */
+QLabel { background-color: transparent; }
+QGroupBox QLabel { background-color: transparent; padding: 4px 0; }
+QGroupBox QCheckBox { background-color: transparent; padding: 4px 0; }
+QLineEdit, QSpinBox, QComboBox {
+    background-color: #ffffff;
+    color: #333333;
+    border: 1px solid #dddddd;
+    border-radius: 4px;
+    padding: 6px;
+    font-size: 15px;
+    min-height: 28px;
+}
+QLineEdit:hover, QSpinBox:hover, QComboBox:hover { border-color: #bbbbbb; }
+QLineEdit:focus, QSpinBox:focus, QComboBox:focus { border-color: #1976d2; }
+QSlider::groove:horizontal { background: #dddddd; height: 8px; border-radius: 4px; }
+QSlider::handle:horizontal { background: #1976d2; width: 18px; margin: -5px 0; border-radius: 9px; }
+QSlider::handle:horizontal:hover { background: #2196f3; }
+QTableWidget {
+    background-color: #ffffff;
+    gridline-color: #dddddd;
+    border: 1px solid #dddddd;
+    border-radius: 4px;
+}
+QTableWidget::item { color: #333333; padding: 5px; }
+QHeaderView::section {
+    background-color: #f0f0f0;
+    color: #333333;
+    border: none;
+    padding: 8px;
+    font-size: 15px;
+}
+QTabWidget::pane {
+    border: 1px solid #dddddd;
+    background-color: #ffffff;
+    border-radius: 4px;
+    margin-top: 2px;
+}
+QTabBar::tab {
+    background-color: #eeeeee;
+    color: #333333;
+    padding: 8px 20px;
+    border: 1px solid #dddddd;
+    margin-right: 2px;
+    border-radius: 4px 4px 0 0;
+    font-size: 15px;
+}
+QTabBar::tab:selected { background-color: #ffffff; border-bottom-color: #ffffff; }
+QTextEdit {
+    background-color: #ffffff;
+    color: #333333;
+    border: 1px solid #dddddd;
+    border-radius: 4px;
+    padding: 8px;
+    font-family: "Consolas", "Monaco", monospace;
+    font-size: 15px;
+}
+QToolButton#clearLogBtn, QPushButton#clearLogBtn {
+    padding: 2px 6px;
+    min-height: 22px;
+    min-width: 0px;
+    border: none;
+    color: #333333;
+}
+QToolButton#clearLogBtn:hover, QPushButton#clearLogBtn:hover { background-color: #eeeeee; }
+QToolButton#clearLogBtn:pressed, QPushButton#clearLogBtn:pressed { background-color: #e0e0e0; }
+/* 特定按钮配色（浅色主题下同色系） */
+#danger { background-color: #e74c3c; color: #ffffff; }
+#danger:hover { background-color: #c0392b; }
+#danger:pressed { background-color: #a93226; }
+
+#modeManual { background-color: #2ecc71; color: #ffffff; }
+#modeManual:hover { background-color: #27ae60; }
+#modeManual:pressed { background-color: #1f8f4d; }
+
+#modeAuto { background-color: #3498db; color: #ffffff; }
+#modeAuto:hover { background-color: #2980b9; }
+#modeAuto:pressed { background-color: #2471a3; }
+
+/* TrackWidget 样式 */
+TrackWidget {
+    background-color: #ffffff;
+    border: 2px solid #dddddd;
+    border-radius: 8px;
+
+    /* 轨道参数面板（浅色现代） */
+    qproperty-panelBackgroundColor: rgba(255, 255, 255, 235);
+    qproperty-panelBorderColor: #dddddd;
+    qproperty-panelTitleColor: #1976d2;
+    qproperty-panelTextColor: #333333;
+}

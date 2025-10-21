@@ -1,0 +1,144 @@
+﻿/* 全局样式 */
+QMainWindow, QWidget {
+    background-color: #2c2f33;
+    color: #ffffff;
+    font-family: "Microsoft YaHei", "Segoe UI", sans-serif;
+    font-size: 15px;
+}
+
+/* 核心修改：让QGroupBox内的QLabel背景透明 */
+QGroupBox QLabel {
+    background-color: transparent;  /* 继承父容器背景 */
+    padding: 4px 0;                /* 可选：调整内边距，优化对齐 */
+}
+QGroupBox QCheckBox {
+    background-color: transparent;  /* 继承父容器背景 */
+    padding: 4px 0;                /* 可选：调整内边距，优化对齐 */
+}
+
+/* 分组框样式 */
+QGroupBox {
+    border: 1px solid #444;
+    border-radius: 6px;
+    margin-top: 10px;
+    padding: 15px;
+    background-color: #393c40;
+}
+QGroupBox::title {
+    color: #e0e0e0;
+    font-size: 16px;
+    font-weight: bold;
+    subcontrol-origin: margin;
+    left: 10px;
+}
+
+/* 按钮样式 */
+QPushButton {
+    background-color: #4a4f56;
+    color: #ffffff;
+    border: none;
+    border-radius: 4px;
+    padding: 8px 16px;
+    font-size: 15px;
+}
+QPushButton:hover {
+    background-color: #5a5f66;
+}
+QPushButton:pressed {
+    background-color: #3a3f46;
+}
+QPushButton:disabled {
+    background-color: #3a3f46;
+    color: #888;
+}
+
+/* 输入控件样式 */
+QLineEdit, QSpinBox, QComboBox {
+    background-color: #444;
+    color: #ffffff;
+    border: 1px solid #555;
+    border-radius: 4px;
+    padding: 6px;
+    font-size: 15px;
+    min-height: 28px;
+}
+QSlider::groove:horizontal {
+    background: #444;
+    height: 8px;
+    border-radius: 4px;
+}
+QSlider::handle:horizontal {
+    background: #666;
+    width: 18px;
+    margin: -5px 0;
+    border-radius: 9px;
+}
+QSlider::handle:horizontal:hover {
+    background: #888;
+}
+
+/* 表格样式 */
+QTableWidget {
+    background-color: #393c40;
+    gridline-color: #444;
+    border: 1px solid #444;
+    border-radius: 4px;
+}
+QTableWidget::item {
+    color: #ffffff;
+    padding: 5px;
+}
+QHeaderView::section {
+    background-color: #444;
+    color: #ffffff;
+    border: none;
+    padding: 8px;
+    font-size: 15px;
+}
+/* 表格左上角角落按钮样式（解决白色区域问题） */
+QTableCornerButton::section {
+    background-color: #393c40; /* 与表格背景色保持一致 */
+    border: none; /* 去掉默认边框，可根据需求调整 */
+}
+
+/* 标签页样式 */
+QTabWidget::pane {
+    border: 1px solid #444;
+    background-color: #393c40;
+    border-radius: 4px;
+    margin-top: 2px;
+}
+QTabBar::tab {
+    background-color: #444;
+    color: #ffffff;
+    padding: 8px 20px;
+    border: 1px solid #555;
+    margin-right: 2px;
+    border-radius: 4px 4px 0 0;
+    font-size: 15px;
+}
+QTabBar::tab:selected {
+    background-color: #393c40;
+    border-bottom-color: #393c40;
+}
+
+/* 日志区域样式 */
+QTextEdit {
+    background-color: #282c34;
+    color: #abb2bf;
+    border: 1px solid #444;
+    border-radius: 4px;
+    padding: 8px;
+    font-family: "Consolas", "Monaco", monospace;
+    font-size: 15px;
+}
+
+/* 状态标签样式 */
+.status-connected {
+    color: #4caf50;
+    font-weight: bold;
+}
+.status-disconnected {
+    color: #f44336;
+    font-weight: bold;
+}

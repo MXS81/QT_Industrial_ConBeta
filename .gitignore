@@ -1,0 +1,35 @@
+# 配置文件
+.claude/
+
+# Qt临时文件和构建目录
+build/
+*.pro.user
+*.user
+CMakeLists.txt.user
+
+# 编译产物
+*.o
+*.obj
+*.exe
+*.dll
+*.lib
+*.a
+*.so
+
+# IDE文件
+.vscode/
+.idea/
+*.sublime-*
+
+# 系统文件
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# 临时文件
+*.tmp
+*.temp
+*~
+
+# 日志文件
+*.log

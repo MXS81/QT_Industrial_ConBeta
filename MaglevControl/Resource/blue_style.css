@@ -1,0 +1,169 @@
+﻿/* 全局样式 - 深蓝主背景与浅蓝色Widget */
+QMainWindow {
+    background-color: #1a293c; /* 深蓝色主背景 */
+    color: #e0e6ed; /* 浅色文本，与深蓝背景形成对比 */
+    font-family: "Microsoft YaHei", "Segoe UI", sans-serif;
+    font-size: 15px;
+}
+
+/* Widget控件背景设置为浅蓝色 */
+QWidget {
+    background-color: #c5d0e0; /* 浅蓝色Widget背景 */
+    color: #2a303a; /* 深色文本，适应浅蓝色背景 */
+    font-family: "Microsoft YaHei", "Segoe UI", sans-serif;
+    font-size: 15px;
+}
+
+/* 分组框样式 - 清晰划分区域 */
+QGroupBox {
+    border: 1px solid #5a7690; /* 调整边框色以适应新背景 */
+    border-radius: 6px;
+    margin-top: 10px;
+    padding: 15px;
+    background-color: #ffffff; /* 保持白色背景，增强区域划分 */
+}
+QGroupBox::title {
+    color: #1a385d; /* 深蓝色标题 */
+    font-size: 16px;
+    font-weight: bold;
+    subcontrol-origin: margin;
+    left: 10px;
+}
+
+/* 组内元素样式调整 */
+QGroupBox QLabel,
+QGroupBox QCheckBox {
+    background-color: transparent;
+    padding: 4px 0;
+}
+
+/* 按钮样式 - 协调的蓝色系 */
+QPushButton {
+    background-color: #2d6bb8; /* 深蓝色按钮 */
+    color: #ffffff;
+    border: 1px solid #1e5ba0;
+    border-radius: 4px;
+    padding: 8px 16px;
+    font-size: 15px;
+}
+QPushButton:hover {
+    background-color: #3d7bc0;
+}
+QPushButton:pressed {
+    background-color: #1e5ba0;
+}
+QPushButton:disabled {
+    background-color: #5a7690;
+    color: #a9b9cf;
+    border-color: #4a6680;
+}
+
+/* 危险操作按钮 */
+QPushButton[danger="true"] {
+    background-color: #f56c6c;
+    border-color: #e05656;
+}
+QPushButton[danger="true"]:hover {
+    background-color: #f78989;
+}
+
+/* 输入控件样式 */
+QLineEdit, QSpinBox, QComboBox {
+    background-color: #ffffff;
+    color: #2a303a;
+    border: 1px solid #5a7690;
+    border-radius: 4px;
+    padding: 6px;
+    font-size: 15px;
+    min-height: 28px;
+}
+QLineEdit:focus, QSpinBox:focus, QComboBox:focus {
+    border-color: #2d6bb8;
+    outline: 1px solid rgba(45, 107, 184, 0.3);
+}
+
+/* 滑块样式 */
+QSlider::groove:horizontal {
+    background: #a5b0c0;
+    height: 8px;
+    border-radius: 4px;
+}
+QSlider::handle:horizontal {
+    background: #2d6bb8;
+    width: 18px;
+    margin: -5px 0;
+    border-radius: 9px;
+    border: 1px solid #1e5ba0;
+}
+QSlider::handle:horizontal:hover {
+    background: #3d7bc0;
+}
+
+/* 表格样式 */
+QTableWidget {
+    background-color: #ffffff;
+    gridline-color: #99a9bf;
+    border: 1px solid #5a7690;
+    border-radius: 4px;
+}
+QTableWidget::item {
+    color: #2a303a;
+    padding: 5px;
+}
+QTableWidget::item:selected {
+    background-color: #9dc0e0;
+    color: #1a385d;
+}
+QHeaderView::section {
+    background-color: #a5b0c0;
+    color: #1a385d;
+    border: 1px solid #5a7690;
+    padding: 8px;
+    font-size: 15px;
+}
+
+/* 标签页样式 */
+QTabWidget::pane {
+    border: 1px solid #5a7690;
+    background-color: #ffffff;
+    border-radius: 4px;
+    margin-top: 2px;
+}
+QTabBar::tab {
+    background-color: #a5b0c0;
+    color: #1a385d;
+    padding: 8px 20px;
+    border: 1px solid #5a7690;
+    margin-right: 2px;
+    border-radius: 4px 4px 0 0;
+    font-size: 15px;
+}
+QTabBar::tab:selected {
+    background-color: #ffffff;
+    border-bottom-color: #ffffff;
+}
+
+/* 日志区域样式 */
+QTextEdit {
+    background-color: #f0f4f8;
+    color: #2a303a;
+    border: 1px solid #5a7690;
+    border-radius: 4px;
+    padding: 8px;
+    font-family: "Consolas", "Monaco", monospace;
+    font-size: 15px;
+}
+
+/* 状态标签样式 */
+.status-connected {
+    color: #28a745;
+    font-weight: bold;
+}
+.status-disconnected {
+    color: #dc3545;
+    font-weight: bold;
+}
+.status-warning {
+    color: #fd7e14;
+    font-weight: bold;
+}
